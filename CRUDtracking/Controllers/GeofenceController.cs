@@ -61,11 +61,11 @@ namespace CRUDtracking.Controllers
 
             var connection = getConnection();
             connection.Open();
-            var query = @"select id,isnull(name,''),isnull(description,''),isnull(latitude,0),
+            var query = @$"select id,isnull(name,''),isnull(description,''),isnull(latitude,0),
                             isnull(longitude,0),isnull(radius,0),isnull(enterpriseid,0),
                             isnull(geofencetypeid,0),isnull(active,'') 
 		                  from geofence
-                          where id = " + id;
+                          where id = {id}";
             var command = new SqlCommand(query, connection);
             var reader = command.ExecuteReader();
             if(reader.HasRows)
