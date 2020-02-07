@@ -5,28 +5,22 @@ using System.Threading.Tasks;
 
 namespace CRUDtracking.Models
 {
-    public class Geofence
+    public class Geofencetype
     {
-        public Geofence()
+        public Geofencetype()
         {
             Name = "";
-            Description = "";
-            Active = "";
+            Icon = "";
+            Colour = "rgb(0,0,0)";
             Enterprise = new Enterprise();
-            Geofencetype = new Geofencetype();
+            Active = "";
         }
-
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public int Radius { get; set; }
+        public string Icon { get; set; }
+        public string Colour { get; set; }
         public int Enterpriseid { get; set; }
-        public int Geofencetypeid { get; set; }
         public Enterprise Enterprise { get; set; }
-        public Geofencetype Geofencetype { get; set; }
         public string Active { get; set; }
-        
     }
 }
