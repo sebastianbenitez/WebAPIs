@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDtracking.Models
+namespace CRUDtracking.DAL.DTO
 {
-    public class Geofence
+    public class GeofenceDTO
     {
-        public Geofence()
+        public GeofenceDTO()
         {
             Name = "";
             Description = "";
             Active = "";
-            Enterprise = new Enterprise();
-            Geofencetype = new Geofencetype();
+            Enterprise = new EnterpriseDTO();
+            Geofencetype = new GeofencetypeDTO();
         }
 
         public int Id { get; set; }
@@ -22,10 +22,10 @@ namespace CRUDtracking.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public int Radius { get; set; }
-        /*public int Enterpriseid { get; set; }
-        public int Geofencetypeid { get; set; }*/
-        public Enterprise Enterprise { get; set; }
-        public Geofencetype Geofencetype { get; set; }
-        public string Active { get; set; }        
+        public int Enterpriseid { get; set; }
+        public int Geofencetypeid { get; set; }
+        public EnterpriseDTO Enterprise { get; set; }
+        public GeofencetypeDTO Geofencetype { get; set; }
+        public string Active { get; set; }
     }
 }

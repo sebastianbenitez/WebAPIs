@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDtracking.Models
+namespace CRUDtracking.DAL.DTO
 {
-    public class Geofencetype
+    public class GeofencetypeDTO
     {
-        public Geofencetype()
+        public GeofencetypeDTO()
         {
             Name = "";
             Icon = "";
             Colour = "rgb(0,0,0)";
-            //Enterprise = new Enterprise();
+            //Enterprise = new EnterpriseDTO();
             Active = "";
         }
         public int Id { get; set; }
@@ -20,7 +20,7 @@ namespace CRUDtracking.Models
         public string Icon { get; set; }
         public string Colour { get; set; }
         /*public int Enterpriseid { get; set; }
-        public Enterprise Enterprise { get; set; }*/
+        public EnterpriseDTO Enterprise { get; set; }*/
         public string Active { get; set; }
     }
 }
